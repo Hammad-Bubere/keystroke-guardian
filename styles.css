@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccffff;
+    padding: 40px;
+}
+
+.accordion-container {
+    width: 89vwpx;
+    margin: 0 auto;
+    padding: 0 5%;
+    background: rgb(0, 213, 255);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.accordion-container img {
+    height: fit-content;
+    width: 15%;
+    border-radius: 10px;
+}
+
+.accordion-container a {
+    height: 40px;
+    width: 10%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    width: 70%;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #0056b3;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    width: 70%;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Adjust based on content height */
+}
